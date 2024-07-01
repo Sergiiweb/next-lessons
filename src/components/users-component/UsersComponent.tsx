@@ -1,7 +1,7 @@
 import {IUser} from "@/types";
 import Link from "next/link";
 
-const UsersComponent = async () => {
+const UsersComponent: () => Promise<JSX.Element> = async () => {
     const users = await fetch('https://jsonplaceholder.typicode.com/users')
         .then(value => value.json());
 
