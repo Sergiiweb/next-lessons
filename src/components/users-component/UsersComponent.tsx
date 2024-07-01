@@ -1,4 +1,4 @@
-import {IUser} from "../../../types";
+import {IUser} from "../../types";
 
 const UsersComponent = async () => {
     const users = await fetch('https://jsonplaceholder.typicode.com/users')
