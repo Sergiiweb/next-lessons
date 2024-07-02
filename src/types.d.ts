@@ -10,3 +10,14 @@ export interface IPost {
     title: string;
     body: string;
 }
+
+export interface IMeals{
+    id: number;
+    slug: string;
+    title: string;
+    image: string;
+    summary: string;
+    instructions: string;
+    creator: string;
+    creator_email: string;
+}

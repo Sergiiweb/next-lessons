@@ -1,7 +1,13 @@
-const MealsPage = () => {
+import {getMeals} from "@/services/db/db";
+
+const MealsPage = async () => {
+    const meals = await getMeals();
+
     return (
         <div>
-            MealsPage
+            {
+                meals.map(meal => <div key={meal.id}>{meal.title}</div>)
+            }
         </div>
     );
 };
