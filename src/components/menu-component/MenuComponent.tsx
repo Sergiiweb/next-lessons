@@ -13,6 +13,9 @@ const MenuComponent = () => {
                 <li>
                     <Link href={'/posts'}>Posts</Link>
                 </li>
+                <li>
+                    <Link href={'/meals'}>Meals</Link>
+                </li>
             </ul>
             <hr/>
         </div>
