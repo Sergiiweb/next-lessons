@@ -1,9 +1,10 @@
-import {IUser} from "@/types";
 import Link from "next/link";
 
+import {userService} from "@/services/api.service";
+import {IUser} from "@/types";
+
 const UsersComponent: () => Promise<JSX.Element> = async () => {
-    const users = await fetch('https://jsonplaceholder.typicode.com/users')
-        .then(value => value.json());
+    const users = await userService.getAllUsers();
 
     return (
         <div>
