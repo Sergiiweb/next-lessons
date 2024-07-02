@@ -1,7 +1,9 @@
-import {IPost} from "@/types";
+import {FC} from "react";
 import Link from "next/link";
 
-const PostsComponent = async () => {
+import {IPost} from "@/types";
+
+const PostsComponent: FC = async () => {
     const posts = await fetch('https://jsonplaceholder.typicode.com/posts')
         .then(value => value.json());
 

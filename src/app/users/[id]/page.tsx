@@ -1,3 +1,5 @@
+import {FC} from "react";
+
 import {IUser} from "@/types";
 
 interface IProps {
@@ -6,7 +8,7 @@ interface IProps {
     }
 }
 
-const UserPage: ({params: {id}}: IProps) => Promise<JSX.Element> = async ({params: {id}}) => {
+const UserPage: FC<IProps> = async ({params: {id}}) => {
     const user: IUser = await fetch('https://jsonplaceholder.typicode.com/users/' + id)
         .then(value => value.json());
 

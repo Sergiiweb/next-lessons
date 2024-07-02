@@ -1,4 +1,5 @@
 import {FC} from "react";
+
 import {IPost} from "@/types";
 
 interface IProps {
